@@ -13,7 +13,6 @@ class DeviseCreateUsers < ActiveRecord::Migration[6.0]
       t.string :l_name_r,           null: false
       t.date :birthday,             null: false
       t.string :p_num,              null: false
-      t.boolean :owner
       ## Recoverable
       t.string   :reset_password_token
       t.datetime :reset_password_sent_at
