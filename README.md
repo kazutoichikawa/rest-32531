@@ -57,12 +57,17 @@ SNSの普及で広告業界は大きく変わった。広告量、媒体の種�
 # テーブル設計
 
 ## User テーブル
-| Column   | Type    | Options                   |
+| Column   | Type    |Options                    |
 | -------- | ------- | ------------------------- |
-| name     | string  | null: false               |
-| email    | string  | null: false, unique: true |
-| password | string  | null: false               | 
-| birthday | date    | null: false               |
+| name     | string  | null:false                |
+| f_name   | string  | null:false                |
+| l_name   | string  | null:false                |
+| f_name_r | string  | null:false                |
+| l_name_r | string  | null:false                |
+| email    | string  | null: false, unique:true  |
+| password | string  | null:false                | 
+| birthday | date    | null:false                |
+| p_num    | string  | null:false                |
 | owner    | boolean |                           |
 
 ### Association
@@ -76,7 +81,7 @@ SNSの普及で広告業界は大きく変わった。広告量、媒体の種�
 | shop_name     | string  | null: false |
 | genre_id      | integer | null: false |
 | profile       | text    | null: false |
-| p_num         | string  | null: false |
+| p_code        | string  | null: false |
 | prefecture_id | integer | null: false |
 | city          | string  | null: false |
 | address       | string  | null: false |
@@ -103,7 +108,7 @@ SNSの普及で広告業界は大きく変わった。広告量、媒体の種�
 | title        | string     | null: false |
 | type         | string     | null: false |
 | price        | integer    | null: false |
-| detail       |text        | null: false |
+| detail       | text       | null: false |
 
 ### Association
 - belongs_to :shop
