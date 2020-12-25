@@ -1,11 +1,19 @@
 <header class="top-page-header">
   <div class="title-box">
-     <a href="#">Re:ST </a>
+     <a href="#">Re:ST!! </a>
   </div>
-
+  <% if user_signed_in? %>
+    <div class="nav">
+      <div class="sign-button"><%= link_to 'SIGN OUT', destroy_user_session_path, method: :delete, class: "signout button" %></div>
+      <div class="sign-button">予約状況確認</div>
+  </div>
+  <% else %>
   <div class="nav">
-      <button type=“button” class="sign-button" onclick="location.href='/users/sign_up'">SIGN UP</button>
-      <button type=“button” class="sign-button" onclick="location.href='/users/sign_in'">SIGN IN</button>
+      <div class="sign-button"><%= link_to 'SIGN IN', user_session_path, class: "signup button" %></div>
+      <div class="sign-button"><%= link_to 'SIGN UP', new_user_registration_path, class: "signin button" %></div>
   </div>
+  <% end %>
+
+
 
 </header>
