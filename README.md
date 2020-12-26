@@ -76,16 +76,17 @@ SNSの普及で広告業界は大きく変わった。広告量、媒体の種�
 - has_many :reviews
 
 ## shop テーブル
-| Column        | Type    | Options     |
-| ------------- | ------- | ----------- |
-| shop_name     | string  | null: false |
-| genre_id      | integer | null: false |
-| profile       | text    | null: false |
-| p_code        | string  | null: false |
-| prefecture_id | integer | null: false |
-| city          | string  | null: false |
-| address       | string  | null: false |
-| building      | string  |             |
+| Column        | Type      | Options     |
+| ------------- | --------- | ----------- |
+| shop_name     | string    | null: false |
+| genre_id      | integer   | null: false |
+| profile       | text      | null: false |
+| p_code        | string    | null: false |
+| prefecture_id | integer   | null: false |
+| city          | string    | null: false |
+| address       | string    | null: false |
+| building      | string    |             |
+| user          | references | null:false |
 
 ### Association
 - belongs_to :user
