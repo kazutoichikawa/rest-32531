@@ -1,4 +1,6 @@
 class User < ApplicationRecord
+  has_many :shops
+
   with_options presence: true do
     validates :name
     validates :email, uniqueness: true

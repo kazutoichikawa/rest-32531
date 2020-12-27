@@ -1,4 +1,4 @@
-.top-page-header {
+.admin-header {
   width: 100vw;
   display: flex;
   justify-content: space-between;
@@ -6,8 +6,8 @@
   border-bottom: solid 10px #666666 ;
 }
 
-.title-box a {
-  width: 15vw;
+.admin-title-box a {
+  width: 300px;
   height: 60px;
   margin: 20px 40px;
   background-color: #ffcc33;
@@ -19,37 +19,39 @@
   text-decoration: none;
 }
 
-.nav {
-  width: 400px;
-  margin: 20px 30px;
-  height: 60px;
-  padding: 0 10px;
-  display: flex;
-  justify-content: space-between;
-  border-radius: 10px;
-  line-height: 20px;
+.admin-main {
+  width: 100vw;
+
 }
 
-.sign-button{
+.menu-main {
   text-decoration: none; 
-  width :150px;
-  padding: 8px;
-  margin: 10px 10px 0 10px;
+  width :100vw;
+  height: 100vh;
   font-size: 18px;
   font-weight: bold;
   color: #333333;
   background: #ffcc33;
+  display: flex;
+  justify-content: center;
+
+}
+
+.menu-list {
+  width: 50%;
+  height: 98%;
+  background-color: white;
   border: solid 3px #666666;
   border-radius: 10px;
-  text-align: center;
-  text-decoration: none;
 }
 
-.button{
-  text-decoration: none;
-}
-
-.login-flash-message{
+.menu {
+  width :250px;
+  height: 30px;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
   text-align: center;
-  color: red;
+  border-radius: 10px;
+  border: solid 2px #666666;
 }
