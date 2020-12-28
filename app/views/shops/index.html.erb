@@ -7,9 +7,32 @@
     <div class="shop">
       <div class="title">レストラン一覧</div>
     </div>
-    <div class="serch-value"></div>
+    <div class="search-value"></div>
     <div class="shop-group">
-      <div class="shop-list"></div>
+      <div class="shop-list">
+        <% @shops.each do |shop| %>
+        <div class="shop-title"><%= shop.shop_name %></div>
+        <div class="shop-detail-group">
+          <div class="shop-image">
+            <%= image_tag shop.image , class: 'shop-image'%>
+          </div>
+            <div class="shop-profile"><%= shop.profile %></div>
+            <div class="shop-reserve-group">
+              <div class="address">
+                <div class="address-title">所在地</div>
+                <div class="address-text"><%= shop.prefecture.name + shop.city + shop.address + shop.building %></div>
+              </div>
+              <div class="shop-reviews-group">
+                <div class="shop-reviews">
+                  <div class="stars">★</div>
+                  <div class="reviews">口コミをみる</div>
+                </div>
+                <div class="reserve-button">予約する</div>
+              </div>
+          </div>
+        </div>
+       <% end %>
+      </div>
     </div>
   </div>
 </div>

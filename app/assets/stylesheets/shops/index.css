@@ -22,11 +22,11 @@
   background-color: #FFDBC9;
   border: solid 3px #666666;
   border-radius: 10px;
+  overflow: scroll;
 }
 
-.shop, .serch-value {
+.shop, .search-value {
   width: 100%;
-  height: 40px;
   border-bottom: solid 3px #666666;
 }
 
@@ -35,10 +35,82 @@
   font-size: 25px;
 }
 
-.shop-list{
-  width: 95%;
-  height : 100px;
-  margin: 15px auto;
-  border: solid 3px #666666;
+.shop-group {
+  height: 100%;
 }
 
+.shop-list{
+  height: 500px;
+  width: 100%;
+
+}
+
+.shop-title{
+  border-bottom: solid 3px #666666;
+}
+
+.shop-detail-group {
+  width: 100%;
+  height: 200px;
+  border-bottom: solid 3px #666666;
+  display: flex;
+}
+
+.shop-image {
+  width: 200px;
+  border-right: solid 3px #666666;
+}
+
+.shop-profile {
+  width: 200px;
+  border-right: solid 3px #666666;
+}
+
+.shop-reserve-group {
+  width: calc(100% - 400px);
+}
+
+.address {
+  border-bottom: solid 3px #666666;
+  height: 70%;
+}
+
+.address-title {
+  height: 20px;
+  border-bottom: solid 3px #666666;
+}
+
+.address-text{
+  height: calc(100% - 20px);
+}
+
+
+.shop-reviews-group {
+  display: flex;
+  height: 30%;
+}
+
+.shop-reviews {
+  display: flex;
+  justify-content: space-around;
+  width: calc(100% - 100px);
+}
+
+.stars {
+  border-right: solid 3px #666666;
+  width: 50%;
+}
+
+.reviews{
+  border-right: solid 3px #666666;
+  width: 50%;
+}
+
+.reserve-button {
+  width: 100px;
+}
+
+.shop-image {
+  width: 200px;
+  height: 200px;
+}
