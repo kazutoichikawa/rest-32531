@@ -1,6 +1,9 @@
 class Shop < ApplicationRecord
   extend ActiveHash::Associations::ActiveRecordExtensions
     belongs_to :genre
+    belongs_to :choise_a
+    belongs_to :choise_b
+    belongs_to :choise_c
     belongs_to :user
     belongs_to :prefecture
     has_one_attached :image
@@ -13,6 +16,7 @@ class Shop < ApplicationRecord
         with_options numericality: { other_than: 1 } do
           validates :genre_id
           validates :prefecture_id
+          validates :choise_a_id
         end
     end
 end

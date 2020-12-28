@@ -2,6 +2,22 @@
 
 <div class="main">
   <div class="form-area">
+    <div class="form-title">検索フォーム</div>
+
+    <div class="search-form">
+      <div class="form form-genre">
+        <div class="form-title">ジャンル</div>
+      
+      </div>
+
+      <div class="form form-address">
+        <div class="form-title">所在地</div>
+      </div>
+
+      <div class="form-choise">
+        <div class="form-title">こだわり条件</div>
+      </div>
+    </div>
   </div>
   <div class="shop-area">
     <div class="shop">
@@ -17,7 +33,12 @@
             <%= image_tag shop.image , class: 'shop-image'%>
           </div>
             <div class="shop-profile"><%= shop.profile %></div>
-            <div class="shop-reserve-group">
+          <div class="shop-reserve-group">
+            <div class="shop-choise">
+              <div class="choise-tag"><%= shop.choise_a.name %></div>
+              <div class="choise-tag"><%= shop.choise_b.name %></div>
+              <div class="choise-tag"><%= shop.choise_c.name %></div>
+            </div>
               <div class="address">
                 <div class="address-title">所在地</div>
                 <div class="address-text"><%= shop.prefecture.name + shop.city + shop.address + shop.building %></div>
@@ -28,7 +49,7 @@
                   <div class="reviews">口コミをみる</div>
                 </div>
                 <div class="reserve-button">予約する</div>
-              </div>
+            </div>
           </div>
         </div>
        <% end %>

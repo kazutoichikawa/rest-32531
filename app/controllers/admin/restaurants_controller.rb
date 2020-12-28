@@ -23,6 +23,6 @@ class Admin::RestaurantsController < ApplicationController
     end
   end
   def shop_params
-    params.require(:shop).permit(:image, :shop_name, :genre_id, :profile, :p_code, :prefecture_id, :city, :address, :building).merge(user_id: current_user.id)
+    params.require(:shop).permit(:image, :shop_name, :genre_id, :profile, :p_code, :prefecture_id, :city, :address, :building, :choise_a_id, :choise_b_id, :choise_c_id).merge(user_id: current_user.id)
   end
 end
