@@ -2,6 +2,7 @@ class Shop < ApplicationRecord
   extend ActiveHash::Associations::ActiveRecordExtensions
     belongs_to :genre
     belongs_to :user
+    belongs_to :prefecture
     has_one_attached :image
     with_options presence: true do
       validates :shop_name , length: { maximum: 40 }
