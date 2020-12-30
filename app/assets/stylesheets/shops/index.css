@@ -33,6 +33,7 @@
 .title {
   text-align: center;
   font-size: 25px;
+  border-bottom: solid 3px #666666;
 }
 
 .shop-group {
@@ -68,26 +69,26 @@
 
 .shop-reserve-group {
   width: calc(100% - 400px);
+  height: 200px;
 }
 
 .address {
   border-bottom: solid 3px #666666;
-  height: 70%;
 }
 
 .address-title {
-  height: 20px;
+  height: 25px;
   border-bottom: solid 3px #666666;
 }
 
 .address-text{
-  height: calc(100% - 20px);
+  height: 50px;
 }
 
 
 .shop-reviews-group {
   display: flex;
-  height: 30%;
+  height: 35px;
 }
 
 .shop-reviews {
@@ -113,4 +114,45 @@
 .shop-image {
   width: 200px;
   height: 200px;
+}
+
+.shop-choise {
+  height: 84px;
+  display: flex;
+  border-bottom: solid 3px #666666;
+}
+.choise-tag {
+  height: 28px;
+  margin: 5px 8px 5px 0;
+  font-size: 14px;
+  border: solid 2px #666666;
+  border-radius: 10px;
+  background-color: lightyellow;
+}
+
+
+
+.form {
+  border: solid 3px #666666;
+  border-radius: 10px;
+  height: 80px;
+  margin: 10px 10px 0 10px;
+}
+
+.search-form {
+  height: 100%;
+}
+
+.form-title {
+  text-align: center;
+  font-size: 20px;
+  border-bottom: solid 3px #666666;
+}
+
+
+.form-choise {
+  border: solid 3px #666666;
+  border-radius: 10px;
+  height: calc(100% - 260px);
+  margin: 10px;
 }

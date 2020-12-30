@@ -1,10 +1,15 @@
 class Shop < ApplicationRecord
   extend ActiveHash::Associations::ActiveRecordExtensions
-    belongs_to :genre
-    belongs_to :user
-    belongs_to :prefecture
-    has_one_attached :image
+  belongs_to :genre
+  belongs_to :prefecture
+
+  belongs_to :user
+  has_many :shop_tag_relations, dependent: :destroy
+  has_many :tags, through: :shop_tag_relations
+  has_one_attached :image
+
     with_options presence: true do
+      validates :image
       validates :shop_name , length: { maximum: 40 }
       validates :profile,    length: { maximum: 400 }
       validates :p_code,     format: { with: /\A\d{3}[-]\d{4}\z/}
