@@ -5,18 +5,28 @@
     <div class="form-title">検索フォーム</div>
 
     <div class="search-form">
-      <div class="form form-genre">
-        <div class="form-title">ジャンル</div>
-      
-      </div>
+      <%= search_form_for @p, url: shops_search_path do |f| %>
+        <div class="form form-genre">
+          <div class="form-title">ジャンル</div>
+          <%= f.label :genre_eq, 'ジャンル' %>
+          <%= f.collection_select :genre_id, Genre.all, :id, :name,  include_blank: '指定なし' %>
+          <br>
+        </div>
 
-      <div class="form form-address">
-        <div class="form-title">所在地</div>
-      </div>
+        <div class="form form-address">
+          <div class="form-title">所在地</div>
+          <%= f.label :prefecture_eq, '所在地' %>
+          <%= f.collection_select :prefecture_id, Prefecture.all, :id, :name,  include_blank: '指定なし' %>
+          <br>
+        </div>
 
-      <div class="form-choise">
-        <div class="form-title">こだわり条件</div>
-      </div>
+        <div class="form-choise">
+          <%= f.label :tag_eq, 'こだわり条件' %>
+          <%= f.collection_radio_buttons :id, Tag.all, :id, :name %>
+          <br>
+        </div>
+        <%= f.submit '検索' %>
+      <% end %>
     </div>
   </div>
   <div class="shop-area">
@@ -35,9 +45,15 @@
             <div class="shop-profile"><%= shop.profile %></div>
           <div class="shop-reserve-group">
             <div class="shop-choise">
-              <div class="choise-tag"><%= shop.choise_a.name %></div>
-              <div class="choise-tag"><%= shop.choise_b.name %></div>
-              <div class="choise-tag"><%= shop.choise_c.name %></div>
+              <div class="choise-tag">
+                <ul class="tag">
+                  <li class="tag-list">
+                    <% shop.tags.each do |tag| %>
+                      <%=tag.name%>
+                    <%end%>
+                  </li>
+                </ul>
+              </div>
             </div>
               <div class="address">
                 <div class="address-title">所在地</div>

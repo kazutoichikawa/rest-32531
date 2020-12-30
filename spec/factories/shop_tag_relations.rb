@@ -1,5 +1,5 @@
 FactoryBot.define do
-  factory :choise_c do
+  factory :shop_tag_relation do
     
   end
 end

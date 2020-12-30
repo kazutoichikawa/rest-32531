@@ -1,5 +1,5 @@
 FactoryBot.define do
-  factory :choise_b do
+  factory :tag do
     
   end
 end

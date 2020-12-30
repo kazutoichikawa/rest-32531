@@ -3,9 +3,6 @@ class CreateShops < ActiveRecord::Migration[6.0]
     create_table :shops do |t|
       t.string :shop_name,      null: false
       t.integer :genre_id,      null: false
-      t.integer :choise_a_id,   null: false
-      t.integer :choise_b_id
-      t.integer :choise_c_id
       t.text :profile,          null: false
       t.string :p_code,         null: false
       t.integer :prefecture_id, null: false
