@@ -27,6 +27,11 @@ class Admin::RestaurantsController < ApplicationController
     @shop.update(shop_params)
   end
 
+  def destroy
+    @shop = Shop.find(params[:id])
+    @shop.destroy
+  end
+
   private
   def if_not_admin
     unless current_user.admin?
