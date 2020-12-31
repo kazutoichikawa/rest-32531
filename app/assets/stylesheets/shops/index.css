@@ -1,25 +1,22 @@
 .main {
   background-color:  #ffcc33;
   width: 100vw;
-  height:100vh;
-  display: flex;
-  justify-content: space-around;
   padding: 10px 0;
 }
 
-.form-area {
+.left-area {
   width: 30%;
   height: 98%;
-  background-color: #FFDBC9;
+  background-color: white;
   border: solid 3px #666666;
   border-radius: 10px;
   justify-content: center;
 }
 
-.shop-area {
+.right-area {
   width: 65%;
   height: 98%;
-  background-color: #FFDBC9;
+  background-color: white;
   border: solid 3px #666666;
   border-radius: 10px;
   overflow: scroll;
@@ -57,8 +54,6 @@
   width: 400px;
   border-right: solid 3px #666666;
 }
-
-
 
 .shop-reserve-group {
   width: calc(100% - 200px);
@@ -106,7 +101,8 @@
 }
 .tag-list {
   height: 28px;
-  margin: 5px 8px 5px 0;
+  padding: 10px 5px 0px 5px;
+  margin: 10px 8px 5px 0;
   font-size: 14px;
   text-align: center;
   border: solid 2px #666666;

@@ -1,7 +1,7 @@
 <%= render partial: "devise/shared/header"%>
 
 <div class="main">
-  <div class="form-area">
+  <div class="left-area">
     <div class="form-title">検索フォーム</div>
 
     <div class="search-form">
@@ -51,13 +51,13 @@
               </div>
 
             <div class="shop-tags">
-                <ul class="tag">
-                    <% shop.tags.each do |tag| %>
-                    <li class="tag-list">
-                      <%=tag.name%>
-                    </li>
-                    <%end%>
-                </ul>
+              <ul class="tag">
+                  <% shop.tags.each do |tag| %>
+                  <li class="tag-list">
+                    <%=tag.name%>
+                  </li>
+                  <%end%>
+              </ul>
             </div>
 
               <div class="shop-show-button">
