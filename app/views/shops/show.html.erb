@@ -1,4 +1,4 @@
-<%= render partial: "devise/shared/header"%>
+<%= render partial: "devise/shared/header" %>
 <div class="main-show">
   <div class="shop-header">
     <div class="shop-title-show">
@@ -65,7 +65,7 @@
           <div class="admin show">
             <div><%= link_to '戻る', root_path, class: "admin-button" %></div>
             <div><%= link_to '編集', edit_admin_restaurant_path, class: "admin-button" %></div>
-            <div ><%= link_to '削除', admin_restaurant_path（@shop.id), method: :delete, class: "admin-button" %></div>
+            <div><%= link_to '削除', admin_restaurant_path(@shop.id), method: :delete, class: "admin-button" %></div>
           </div>
         <% elsif user_signed_in? %>
           <div class="reserve show">
