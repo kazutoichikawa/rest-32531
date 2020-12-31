@@ -2,6 +2,8 @@
   background-color:  #ffcc33;
   width: 100vw;
   padding: 10px 0;
+  display: flex;
+  justify-content: space-around;
 }
 
 .left-area {
@@ -65,19 +67,19 @@
   border-bottom: solid 3px #666666;
 }
 
-.shop-title {
+.index-title {
   height: 25px;
   width: 33%;
   border-right: solid 3px #666666;
 }
 
-.shop-genre {
+.index-genre {
   height: 25px;
   width: 30%;
   border-right: solid 3px #666666;
 }
 
-.shop-address {
+.index-address {
   height: 25px;
   width: 37%;
 }
@@ -97,13 +99,14 @@
 .shop-tags {
   height: 120px;
   display: flex;
+  justify-content: left;
   border-bottom: solid 3px #666666;
 }
 .tag-list {
   height: 28px;
   padding: 10px 5px 0px 5px;
-  margin: 10px 8px 5px 0;
-  font-size: 14px;
+  margin: 10px 0px 5px 8px;
+  font-size: 12px;
   text-align: center;
   border: solid 2px #666666;
   border-radius: 10px;
@@ -145,4 +148,9 @@
   border-radius: 10px;
   height: calc(100% - 260px);
   margin: 10px;
+}
+
+.tag {
+  display: flex;
+  justify-content: left;
 }

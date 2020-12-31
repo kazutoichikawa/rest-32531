@@ -1,5 +1,5 @@
 <%= render partial: "devise/shared/header"%>
-<div class="main">
+<div class="main-show">
   <div class="shop-header">
     <div class="shop-title-show">
       <%= @shop.shop_name %>
@@ -20,7 +20,7 @@
     </div>
   </div>
 
-  <div class="main-show">
+  <div class="contents-show">
     <div class="area-show">
       <div class="shop-image-box-show">
         <%= image_tag @shop.image , class: 'shop-image-show'%>
@@ -45,7 +45,7 @@
             <div class="shop-info-title show">
               <h2>予約・お問い合わせ</h2>
             </div>
-            <div class="info p-num">080-1234-5678</div>
+            <div class="info p-num"><%= @shop.p_num %></div>
           </div>
         </div>
 

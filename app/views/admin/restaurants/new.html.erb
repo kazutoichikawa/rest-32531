@@ -36,11 +36,13 @@
   </div>
 
   <div class="form-group">
-    <div class="form-text">
-      <%#= f.label :name, "タグ" %>
-      </div>
+    <div class="form-text-wrap">
+      <label class="form-text">タグ</label>
       <span class="indispensable">必須</span>
+    </div>
+    <div class="col-md-4 checkbox-list">
       <%= f.collection_check_boxes(:tag_ids, Tag.all, :id, :name ) %>
+    </div>
   </div>
 
   <div class="form-group">
@@ -52,6 +54,15 @@
         <%= f.text_area :profile, class:"input-default profile", id:"profile", placeholder:"400字以内", maxlength:"400"%>
       </div>
   </div>
+
+    <div class="form-group">
+    <div class='form-text-wrap'>
+      <label class="form-text">電話番号</label>
+      <span class="indispensable">必須</span>
+    </div>
+    <%= f.text_field :p_num, class:"input-default", id:"p_num", placeholder:"例)080-1234-5678" %>
+  </div>
+
   <div><h1 class="input-headline">
       所在地入力
     </h1></div>
