@@ -18,6 +18,15 @@ class Admin::RestaurantsController < ApplicationController
     end
   end
 
+  def edit
+    @shop = Shop.find(params[:id])
+  end
+
+  def update
+    @shop = Shop.find(params[:id])
+    @shop.update(shop_params)
+  end
+
   private
   def if_not_admin
     unless current_user.admin?
