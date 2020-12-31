@@ -1,7 +1,7 @@
 <%= render partial: "devise/shared/header"%>
 
 <div class="main">
-  <div class="form-area">
+  <div class="left-area">
     <div class="form-title">検索フォーム</div>
 
     <div class="search-form">
@@ -20,7 +20,7 @@
           <br>
         </div>
 
-        <div class="form-choise">
+        <div class="form-tag">
           <%= f.label :tag_eq, 'こだわり条件' %>
           <%= f.collection_radio_buttons :id, Tag.all, :id, :name %>
           <br>
@@ -37,35 +37,32 @@
     <div class="shop-group">
       <div class="shop-list">
         <% @shops.each do |shop| %>
-        <div class="shop-title"><%= shop.shop_name %></div>
         <div class="shop-detail-group">
           <div class="shop-image">
             <%= image_tag shop.image , class: 'shop-image'%>
           </div>
-            <div class="shop-profile"><%= shop.profile %></div>
+
           <div class="shop-reserve-group">
-            <div class="shop-choise">
-              <div class="choise-tag">
-                <ul class="tag">
+
+              <div class="title-address-genre">
+                <div class="shop-title"><%= shop.shop_name %></div>
+                <div class="shop-genre"><%= shop.genre.name %></div>
+                <div class="shop-address"><%= shop.prefecture.name %></div>
+              </div>
+
+            <div class="shop-tags">
+              <ul class="tag">
+                  <% shop.tags.each do |tag| %>
                   <li class="tag-list">
-                    <% shop.tags.each do |tag| %>
-                      <%=tag.name%>
-                    <%end%>
+                    <%=tag.name%>
                   </li>
-                </ul>
-              </div>
+                  <%end%>
+              </ul>
             </div>
-              <div class="address">
-                <div class="address-title">所在地</div>
-                <div class="address-text"><%= shop.prefecture.name + shop.city + shop.address + shop.building %></div>
+
+              <div class="shop-show-button">
+              <%= link_to '店舗詳細確認・予約', shop_path(shop), class: "shop-show" %>
               </div>
-              <div class="shop-reviews-group">
-                <div class="shop-reviews">
-                  <div class="stars">★</div>
-                  <div class="reviews">口コミをみる</div>
-                </div>
-                <div class="reserve-button">予約する</div>
-            </div>
           </div>
         </div>
        <% end %>
