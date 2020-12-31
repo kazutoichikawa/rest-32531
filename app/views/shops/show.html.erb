@@ -65,11 +65,11 @@
           <div class="admin show">
             <div><%= link_to '戻る', root_path, class: "admin-button" %></div>
             <div><%= link_to '編集', edit_admin_restaurant_path, class: "admin-button" %></div>
-            <div ><%= link_to '削除', root_path, class: "admin-button" %></div>
+            <div ><%= link_to '削除', admin_restaurant_path（@shop.id), method: :delete, class: "admin-button" %></div>
           </div>
         <% elsif user_signed_in? %>
           <div class="reserve show">
-            <div><%= link_to '戻る', root_path, method: :delete, class: "admin-button" %></div>
+            <div><%= link_to '戻る', root_path, class: "admin-button" %></div>
             <div><%= link_to 'ネット予約', root_path, method: :delete, class: "admin-button" %></div>
           </div>
         <% else %>
