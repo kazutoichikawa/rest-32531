@@ -36,7 +36,7 @@
         </div>
       </div>
 
-      <div class="group-show">
+      <div class="detail-show">
         <div class="shop-profile-title">
           <h1>店舗基本情報</h1>
         </div>
@@ -54,12 +54,38 @@
             <div class="shop-info-title show">
               <h2>所在地</h2>
             </div>
-            <div class="info p-code"><%= @shop.p_code %></div>
-            <div class="info address"><%= @shop.prefecture.name + @shop.city + @shop.address + @shop.building %></div>
+            <div class="p-code-address">
+              <div class="info p-code">〒<%= @shop.p_code %></div>
+              <div class="info address"><%= @shop.prefecture.name + @shop.city + @shop.address + @shop.building %></div>
+            </div>
           </div>
         </div>
-      </div>
         
+        <div class="shop-review-box show">
+          <div class="shop-profile-title">
+            <h2>口コミ</h2>
+          </div>
+          <div class="review-box reviews">
+            <% @reviews.each do |review| %>
+              <div class="review-text"><%= review.text %></div>
+              <div class="review-user-time">
+                <%= "#{review.user.name}  #{l review.created_at}" %>
+              </div>
+            <% end %>
+          </div>
+        </div>
+           <div class="review-form">
+            <% if user_signed_in? %>
+              <%= form_with(model: [@shop, @review], local: true) do |form| %>
+                <%= form.text_area :text, placeholder: "100字以内", class:"review-text", rows: "2" %>
+                <%= form.submit "レビューを投稿する", class: "review-form-button" %>
+              <% end %>
+            <% else %>
+              <div class="review-form">口コミの投稿には新規登録/ログインが必要です</div>
+            <% end %>
+            </div>
+        
+
       <div class="shop-info-box show">
         <% if user_signed_in? && current_user.admin? %>
           <div class="admin show">
@@ -68,9 +94,9 @@
             <div><%= link_to '削除', admin_restaurant_path(@shop.id), method: :delete, class: "admin-button" %></div>
           </div>
         <% elsif user_signed_in? %>
-          <div class="reserve show">
+          <div class="admin show">
             <div><%= link_to '戻る', root_path, class: "admin-button" %></div>
-            <div><%= link_to 'ネット予約', root_path, method: :delete, class: "admin-button" %></div>
+            <div><%= link_to 'ネット予約', root_path, class: "admin-button" %></div>
           </div>
         <% else %>
         <% end %>
