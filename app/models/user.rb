@@ -1,6 +1,6 @@
 class User < ApplicationRecord
   has_many :shops
-
+  has_many :reviews
   with_options presence: true do
     validates :name
     validates :email, uniqueness: true
@@ -15,7 +15,7 @@ class User < ApplicationRecord
     end
     validates :birthday
     validates :p_num, format: { with: /\A0(\d{1}[-(]?\d{4}|\d{2}[-(]?\d{3}|\d{3}[-(]?\d{2}|\d{4}[-(]?\d{1})[-)]?\d{4}\z|\A0[5789]0[-]?\d{4}[-]?\d{4}\z/},
-                      length: { in: 1..11 }
+                      length: { in: 1..13 }
   end
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable

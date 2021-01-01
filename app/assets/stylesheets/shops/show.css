@@ -59,14 +59,19 @@
 }
 
 .group-show{
+  margin: 10px  auto;
+  width: 90%;
+  border-bottom: solid 1px #666666;
+}
+
+.detail-show{
   margin: 0 auto;
   width: 90%;
-  border-bottom: solid 2px #666666;
 }
 
 .shop-profile-title {
-  margin-top: 8px;
-  border-bottom: solid 2px #666666;
+  margin: 15px 0;
+  border-bottom: solid 1px #666666;
 }
 
 .shop-info-box {
@@ -103,3 +108,35 @@
   text-decoration: none;
 }
 
+.shop-review-box {
+  height: 200px;
+  margin: 10px 0;
+  border: solid 2px #666666;
+  border-radius: 10px;
+  overflow: scroll;
+}
+
+.review-box {
+  border-bottom: solid 1px #666666;
+  margin: 10px;
+}
+
+.review-user-time {
+  font-size: 14px;
+  text-align: right;
+}
+
+.review-form {
+  text-align: center;
+}
+
+.review-text{
+  height: 38px;
+}
+
+.review-form-button {
+  padding: 5px;
+  margin-left: 5px;
+  color: white;
+  background-color: navy;
+}
